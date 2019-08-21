@@ -12,12 +12,6 @@ let homeTabCount = 1;
 const config = Platform.select({
   web: { headerMode: 'screen' },
   default: {
-    defaultNavigationOptions: ({ navigation }) => ({
-      tabBarIcon: ({ focused, horizontal, tintColor }) => {
-        const { iconName, badgeCount } = routeToIcon(navigation.state.routeName);
-        return <IconWithBadge name={iconName} size={25} badgeCount={badgeCount} color={tintColor} />;
-      },
-    })
   },
 });
 
